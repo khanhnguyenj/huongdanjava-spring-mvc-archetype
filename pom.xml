@@ -6,7 +6,7 @@
 
   <groupId>com.huongdanjava</groupId>
   <artifactId>huongdanjava-springmvc-archetype</artifactId>
-  <version>2.1.2</version>
+  <version>3.0.0</version>
   <packaging>maven-archetype</packaging>
   <name>huongdanjava-springmvc-archetype</name>
   <description>Huong Dan Java - Spring MVC Maven Archetype project.</description>
@@ -38,8 +38,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
   </properties>
 
   <build>
@@ -47,7 +47,7 @@
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
         <artifactId>archetype-packaging</artifactId>
-        <version>3.2.1</version>
+        <version>3.4.1</version>
       </extension>
     </extensions>
 
@@ -55,7 +55,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.8</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

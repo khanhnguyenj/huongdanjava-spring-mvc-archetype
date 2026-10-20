@@ -21,7 +21,7 @@
     <name>Huong Dan Java</name>
     <url>https://huongdanjava.com/</url>
   </organization>
-  <url>https://github.com/huongdanjavacom/huongdanjava-springmvc-archetype</url>
+  <url>https://github.com/khanhnguyenj/huongdanjava-spring-mvc-archetype</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -29,10 +29,15 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
+
   <scm>
-    <developerConnection>Khanh Nguyen</developerConnection>
-    <url>https://github.com/huongdanjavacom/huongdanjava-springmvc-archetype.git</url>
+    <connection>scm:git:https://github.com/khanhnguyenj/huongdanjava-spring-mvc-archetype.git
+    </connection>
+    <developerConnection>
+      scm:git:ssh://git@github.com/khanhnguyenj/huongdanjava-spring-mvc-archetype.git
+    </developerConnection>
+    <url>https://github.com/khanhnguyenj/huongdanjava-spring-mvc-archetype</url>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
@@ -63,24 +68,19 @@
             <goals>
               <goal>sign</goal>
             </goals>
-            <configuration>
-              <keyname>sonartype</keyname>
-              <passphraseServerId>sonartype</passphraseServerId>
-            </configuration>
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.12.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
 </project>
